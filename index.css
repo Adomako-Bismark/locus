@@ -1,0 +1,282 @@
+body {
+	min-width: 610px;
+	height: 1000px;
+}
+
+@font-face {
+	font-family: NC_Gordita;
+	src: url("OSM_fonts/New Cicle Gordita.ttf");
+}
+@font-face {
+	font-family: NC_Gordita;
+	src: url("OSM_fonts/New Cicle Gordita.eot");
+}
+@font-face {
+	font-family: NC_Fina;
+	src: url("OSM_fonts/New Cicle Fina.ttf");
+}
+@font-face {
+	font-family: NC_Fina;
+	src: url("OSM_fonts/New Cicle Fina.eot");
+}
+
+/*--- DROPDOWN ---*/
+#nav_menu ul{
+    background:#fff; /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page's background as possible (i.e. white page == white background). */
+    background:rgba(255,255,255,0); /* But! Let's make the background fully transparent where we can, we don't actually want to see it if we can help it... */
+    list-style:none;
+    position:absolute;
+    left:-9999px; /* Hide off-screen when not needed (this is more accessible than display:none;) */
+}
+#nav_menu ul li{
+    padding-top:1px; /* Introducing a padding between the li and the a give the illusion spaced items */
+    float:none;
+}
+#nav_menu ul a{
+    white-space:nowrap; /* Stop text wrapping and creating multi-line dropdown items */
+}
+#nav_menu li:hover ul{ /* Display the dropdown on hover */
+    left:0; /* Bring back on-screen when needed */
+}
+#nav_menu li:hover a{ /* These create persistent hover states, meaning the top-most link stays 'hovered' even when your cursor has moved down the list. */
+    background:#6b0c36;
+    text-decoration:underline;
+}
+#nav_menu li:hover ul a{ /* The persistent hover state does however create a global style for links even before they're hovered. Here we undo these effects. */
+    text-decoration:none;
+}
+#nav_menu li:hover ul li a:hover{ /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+        background:#333;}
+
+h1{
+ text-align: center;
+    font-family: NC_Fina;
+    text-transform: uppercase;
+}
+
+h3{
+    text-align: center;
+    font-family: NC_Fina;
+    text-transform: lowercase;
+}
+html { 
+  background: url(images/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#main{
+display: block;
+}
+
+#welcome_address{
+    background-color: #c94848;
+}
+#Locus_nav{
+float:left;
+}
+#logo{
+height: 100px;
+    width: 500px;
+}
+#Locus_nav_logo{
+	height: 40px;
+	width: 100px;
+}
+
+#sign_menu {
+	font-size: 16px;
+	font-family: NC_Gordita;
+	text-align: center;
+	color: #424242;
+	float: right;
+	margin-right: 15px;
+	margin-bottom: 1px;
+}
+#sign_menu li {
+	display: inline;
+}
+#sign_menu a {
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	border-style: solid;
+	border: 1px solid;
+	border-color: #554b4b;
+	border-radius: 5px;
+}
+#sign_menu a:hover {
+	background-color: #c62020;
+	color: aliceblue;
+}
+
+#display_image{
+        opacity: 0.5;
+        width: 100%;
+        height: 500px;
+}
+#locus_header_wrap {
+    opacity:0.7;
+    filter: alpha(opacity=50);
+	position: fixed;
+	float: right;
+	width: 100%;
+	height: 55px;
+	background-color: rgb(255, 255, 255);
+	margin-top: 2px;
+	margin-bottom: 5px;
+	min-width: 600px;
+	display: inline;
+	z-index: 100;
+	border-bottom: 1px solid;
+	border-bottom-color: #a8a8a8;
+    
+}
+#nav_menu{
+    width: inherit;
+	float: right;
+	position: relative;
+	font-size: 25px;
+	font-family: NC_Fina;
+	text-align: center;
+	color: 1;
+	padding: 10px;
+	margin-top: 6px;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 300px;
+    background-color: #c94848;
+}
+#nav_menu li {
+	display: inline;
+}
+a:link {
+	text-decoration: none;
+	color: inherit;
+}
+a:visited {
+	text-decoration: none;
+	color: inherit;
+}
+#nav_menu a {
+	padding-right: 15px;
+	padding-left: 15px;
+	border-bottom: 3px;
+	border-top: 3px;
+}
+#nav_menu a:hover {
+	color: #9f2626;
+}
+
+
+#search_homepage{
+	margin-top: 45px;
+	position: fixed;
+	display:inline-block;
+	width: 100%;
+	height: 73px;
+	text-align: center;
+	min-width: 400px;
+	z-index: 100;
+}
+#search_homepage> * {
+    vertical-align:middle;
+}
+#searchMall_textfield {
+	font-family: NC_Fina;
+	font-size: 20px;
+	height: 40px;
+	text-align: left;
+	border: 1px solid;
+	border-color: #a00000;
+	border-radius: 16px;
+	padding-left:10px;
+	margin-top:10px;
+  margin-left: auto;
+	margin-right: auto;
+}
+#search_homepage_icon{
+	margin-top:12px;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+#search_homepage_icon a:hover{
+ background-color: #d600ff;
+}
+#search_icon{
+	display: relative;
+	margin-left: -50px;
+	margin-top:2px;
+	height: 40px;
+	width: 40px;
+	border-radius: 20px;
+}
+input:focus{
+	outline: none;
+}
+input:focus::-webkit-input-placeholder {
+  transition: text-indent 0.1s 0.1s ease; 
+  text-indent: -100%;
+  opacity: 1;
+}
+
+#ads_section1 { 
+	display: block;
+	float: right;
+  width: 100%; 
+  height: 500px; 
+	margin-top: 118px;
+	z-index: 50;
+}
+#ads_section1 img { 
+    width: 100%;
+    height: inherit;
+    position: absolute;  
+}
+
+#locus_footer_wrap{
+	position: fixed;
+	display: block;
+	float: right;
+	width: 100%; 
+  height: 300px; 
+	bottom:0px;
+	background-color: #933131;
+}
+
+#footer_section1_text{
+	display: block;
+	height: 250px;
+	font-size: 16px;
+	font-family: NC_Fina;
+	color: #424242;
+	float: left;
+}
+
+#footer_section2_text1{
+	display: block;
+	height: 20px;
+	font-size: 15px;
+	font-family: NC_Fina;
+	text-align: center;
+	color: #424242;
+	float: left;
+	padding: 8px;
+	bottom: 13px;
+}
+
+#footer_section2_text2{
+	height: 20px;
+	font-size: 15px;
+	font-family: NC_Fina;
+	text-align: center;
+	color: #424242;
+	float: left;
+	padding: 8px;
+	bottom: 13px;
+}
